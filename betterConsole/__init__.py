@@ -9,7 +9,7 @@ import inspect
 import json
 import pprint
 
-v = "dev-0.1a"
+v = "0.0.1"
 github=" Sorry I dont have a github page yet"
 
 psg.LOOK_AND_FEEL_TABLE['BtrConsole'] = {'BACKGROUND': '#fafafa',
