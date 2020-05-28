@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: Better-Console
+Version: 0.0.2
+Summary: A Better Console for python programs
+Home-page: https://github.com/ultraflame4/Better-Console-python
+Author: ultraflame4
+Author-email: ultraflame4@gmail.com
+License: UNKNOWN
+Description: # Better Console
+        Provides a better console for python programs to use
+        
+        # Installation:
+         pip install Better-Console==0.0.2
+        
+        ## Features:
+        Filters for Debug, Info, Warning, Critical , Error and Normal messages
+        
+        
+        Text input bar to execute commands
+        
+        
+        ## Usage:
+        ```python
+        # Example:
+        import Better_Console
+        c=betterConsole.BetterConsole()
+        c.loop()
+        c.print("Test","test")
+        c.debug("Test","test")
+        c.info("Test","test")
+        c.warn("test","test")
+        c.crit("Crit TEst","test")
+        c.error("tset","test")
+        while True:
+            c.loop()
+        
+        
+        ```
+        
+        
+        # Dependencies:
+        
+        PySimpleGuiQt
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown

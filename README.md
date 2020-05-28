@@ -14,7 +14,7 @@ Text input bar to execute commands
 ## Usage:
 ```python
 # Example:
-import betterConsole
+import Better_Console
 c=betterConsole.BetterConsole()
 c.loop()
 c.print("Test","test")
