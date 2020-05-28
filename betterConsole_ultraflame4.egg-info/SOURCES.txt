@@ -1,7 +1,0 @@
-README.md
-setup.py
-betterConsole/__init__.py
-betterConsole_ultraflame4.egg-info/PKG-INFO
-betterConsole_ultraflame4.egg-info/SOURCES.txt
-betterConsole_ultraflame4.egg-info/dependency_links.txt
-betterConsole_ultraflame4.egg-info/top_level.txt
