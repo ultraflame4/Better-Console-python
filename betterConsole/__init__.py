@@ -8,7 +8,7 @@ import traceback
 import inspect
 import json
 
-v = "0.0.2"
+v = "0.0.21"
 github=" https://github.com/ultraflame4/Better-Console-python"
 
 psg.LOOK_AND_FEEL_TABLE['BtrConsole'] = {'BACKGROUND': '#fafafa',

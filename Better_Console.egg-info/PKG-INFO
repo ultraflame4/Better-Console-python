@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: Better-Console
-Version: 0.0.2
+Version: 0.0.3
 Summary: A Better Console for python programs
 Home-page: https://github.com/ultraflame4/Better-Console-python
 Author: ultraflame4
@@ -10,7 +10,7 @@ Description: # Better Console
         Provides a better console for python programs to use
         
         # Installation:
-         pip install Better-Console==0.0.2
+         pip install Better-Console==0.0.21
         
         ## Features:
         Filters for Debug, Info, Warning, Critical , Error and Normal messages
