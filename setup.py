@@ -1,10 +1,13 @@
 import setuptools
-
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 setuptools.setup(
     name="betterConsole-ultraflame4",
     version="0.0.1",
     author="ultraflame4",
     author_email="ultraflame4@gmail.com",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     description="A Better Console for python programs",
     url="https://github.com/ultraflame4/Better-Console-python",
     packages=setuptools.find_packages(),
