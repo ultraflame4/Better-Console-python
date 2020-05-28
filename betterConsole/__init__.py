@@ -1,5 +1,5 @@
 '''
-# Better Console Created By ultraflame42
+# Better Console Created By ultraflame4
 '''
 
 import PySimpleGUIQt as psg
@@ -7,10 +7,9 @@ import time
 import traceback
 import inspect
 import json
-import pprint
 
-v = "0.0.1"
-github=" Sorry I dont have a github page yet"
+v = "0.0.2"
+github=" https://github.com/ultraflame4/Better-Console-python"
 
 psg.LOOK_AND_FEEL_TABLE['BtrConsole'] = {'BACKGROUND': '#fafafa',
                                         'TEXT': '#000000',
@@ -151,7 +150,7 @@ class CommandsHandler:
 class BetterConsole:
     def __init__(self,ConsoleWinName="Default Name"):
         psg.theme("BtrConsole")
-        print(f"Better Console by ultraflame42 [Version-{v}]\nGithub:{github}\n\n")
+        print(f"Better Console by ultraflame42 [Version-{v}]\nGithub:{github}\n")
         layout=[
             [psg.Text("Filters:",size=(17,0.7)),psg.Button("Normal",size=(17,0.7)),psg.Button("Debug",size=(17,0.7)),psg.Button("Info",size=(17,0.7)),psg.Button("Warning",size=(17,0.7)),psg.Button("Error",size=(17,0.7)),psg.Button("Critical",size=(17,0.7))],
             [psg.Multiline(size=(130,40), key='-Out-')],
@@ -212,7 +211,7 @@ class BetterConsole:
             return bool(self.FilterButtonController.Err.state)
 
     def printc(self,string,mode=0):
-        self.consoleOutputText=self.consoleOutputText+"\n"+self.stringEncoder(string,mode)
+        self.consoleOutputText=self.consoleOutputText+"\n"+self.stringEncoder(string.replace('\n'," | "),mode)
         self.updateConsole()
     def updateConsole(self):
         add=""
@@ -229,14 +228,56 @@ class BetterConsole:
         self.win['-Out-'].print(' ')
         pass
 
+    def print(self,msg,*args):
+        nstring = f"{msg}" + ' '.join(args)
+        nstring.replace("\n",' | ')
+        self.printc(nstring,0)
+
+
     def debug(self,msg,*args):
         ins=inspect.stack()
         func=ins[1].function
-        pprint.pprint(ins)
         file=ins[1].filename
         lineno=ins[1].lineno
-        nstring = f"[file: {file}, line{lineno}]{func} # DEBUG: {msg}" + ' '.join(args)
+        nstring = f"[file: {file}, line{lineno}] {func} # DEBUG: {msg}" + ' '.join(args)
+        nstring.replace("\n",' | ')
         self.printc(nstring,1)
+
+    def info(self,msg,*args):
+        ins=inspect.stack()
+        func=ins[1].function
+        file=ins[1].filename
+        lineno=ins[1].lineno
+        nstring = f"[file: {file}, line{lineno}] {func} # INFO: {msg}" + ' '.join(args)
+        nstring.replace("\n",' | ')
+        self.printc(nstring,2)
+
+    def warn(self,msg,*args):
+        ins=inspect.stack()
+        func=ins[1].function
+        file=ins[1].filename
+        lineno=ins[1].lineno
+        nstring = f"[file: {file}, line{lineno}] {func} # WARNING: {msg}" + ' '.join(args)
+        nstring.replace("\n",' | ')
+        self.printc(nstring,3)
+
+    def crit(self,msg,*args):
+        ins=inspect.stack()
+        func=ins[1].function
+        file=ins[1].filename
+        lineno=ins[1].lineno
+        nstring = f"[file: {file}, line{lineno}] {func} # CRITICAL: {msg}" + ' '.join(args)
+        nstring.replace("\n",' | ')
+        self.printc(nstring,4)
+
+    def error(self,msg,*args):
+        ins=inspect.stack()
+        func=ins[1].function
+        file=ins[1].filename
+        lineno=ins[1].lineno
+        nstring = f"[file: {file}, line{lineno}] {func} # ERROR: {msg}" + ' '.join(args)
+        nstring.replace("\n",' | ')
+        self.printc(nstring,5)
 
     def loop(self):
         '''Include this function in your main loop! Warning: Only recommended to execute once every loop'''
