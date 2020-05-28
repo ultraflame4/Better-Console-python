@@ -1,6 +1,9 @@
 # Better Console
 Provides a better console for python programs to use
 
+# Installation:
+ pip install Better-Console==0.0.2
+
 ## Features:
 Filters for Debug, Info, Warning, Critical , Error and Normal messages
 
