@@ -8,7 +8,7 @@ Provides a better console for python programs to use
 
 
 # Installation:
- pip install Better-Console==0.0.3
+ pip install Better-Console==0.0.5
 
 
 
