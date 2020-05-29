@@ -12,12 +12,17 @@ Provides a better console for python programs to use
 
 
 # Installation:
+## Prerequisites
+python 3.7.5 or above (have no idea if the versions below that work)
+PySimpleGuiQt (should install itself when Better Console is installing)
+
+## install
  pip install Better-Console==0.0.6
 
 
 
 
-## Features:
+# Features:
 Filters for Debug, Info, Warning, Critical , Error and Normal messages
 
 
@@ -60,7 +65,3 @@ while True:
 
 ```
 
-
-# Dependencies:
-
-PySimpleGuiQt,colorama
