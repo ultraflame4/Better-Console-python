@@ -4,7 +4,10 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-green.svg)](http://perso.crans.org/besson/LICENSE.html)
 
-![alt-text](../imgs/f1.png)
+![Filters](/imgs/ezgif-3-e5e15d50dcf7.gif)
+![Filters](/imgs/code.png)
+
+
 Provides a better console for python programs to use
 
 
