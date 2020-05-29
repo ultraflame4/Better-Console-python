@@ -7,11 +7,19 @@ assignees: ultraflame4
 
 ---
 
-** What is the feature you want**
-What is the feature you wish to be added in
+# Feature Request
 
-**Describe the feature**
-Describe about the feature
+### Check
+** Before we start, check if you have completed this steps below**
+(Put x in the square brackets to mark as done)
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+- [ ] I have read through all the feature request and this feature has not been suggested before
+- [ ] The feature has not been denied
+
+
+### Describe the feature:
+a clear and concise description of the feature
+
+### Additional Context:
+any additional stuff you want to let me know? 
+Eg. a name for the feature?
