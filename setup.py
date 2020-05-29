@@ -4,14 +4,14 @@ Please go to the github [here](https://github.com/ultraflame4/Better-Console-pyt
 '''
 setuptools.setup(
     name="Better Console",
-    version="0.0.6",
+    version="0.0.6a",
     author="ultraflame4",
     author_email="ultraflame4@gmail.com",
     long_description=long_description,
     long_description_content_type="text/markdown",
     description="A Better Console for python programs",
     url="https://github.com/ultraflame4/Better-Console-python",
-    packages=setuptools.find_packages(),
+    packages=["Better_Console"],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: GNU License",
