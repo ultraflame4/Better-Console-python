@@ -1,5 +1,5 @@
 '''
-# Better Console Created By ultraflame4
+# Better Console Created By ultraflame42
 '''
 
 import PySimpleGUIQt as psg
@@ -7,9 +7,11 @@ import time
 import traceback
 import inspect
 import json
+import pprint
+#import colorama
 
-v = "0.0.3"
-github=" https://github.com/ultraflame4/Better-Console-python"
+v = "0.0.5"
+github="https://github.com/ultraflame4/Better-Console-python"
 
 psg.LOOK_AND_FEEL_TABLE['BtrConsole'] = {'BACKGROUND': '#fafafa',
                                         'TEXT': '#000000',
@@ -150,11 +152,11 @@ class CommandsHandler:
 class BetterConsole:
     def __init__(self,ConsoleWinName="Default Name"):
         psg.theme("BtrConsole")
-        print(f"Better Console by ultraflame42 [Version-{v}]\nGithub:{github}\n")
+        print(f"Better Console by ultraflame42 [Version-{v}]\nGithub:{github}\n\n")
         layout=[
             [psg.Text("Filters:",size=(17,0.7)),psg.Button("Normal",size=(17,0.7)),psg.Button("Debug",size=(17,0.7)),psg.Button("Info",size=(17,0.7)),psg.Button("Warning",size=(17,0.7)),psg.Button("Error",size=(17,0.7)),psg.Button("Critical",size=(17,0.7))],
-            [psg.Multiline(size=(130,40), key='-Out-')],
-            [psg.Button(">>>",size=(4,1),bind_return_key=True),psg.Input(size=(125.6,1),do_not_clear=False,key="-In-")]
+            [psg.Multiline(size=(180,40), font=("Courier",10), key='-Out-')],
+            [psg.Button(">>>",size=(4,1),bind_return_key=True),psg.Input(size=(175.6,1),do_not_clear=False,key="-In-")]
         ]
         self.win=psg.Window(f" {ConsoleWinName} - [Better Console <version: {v}> by ultraflame42 ]",layout,return_keyboard_events=True,)
 
@@ -233,51 +235,42 @@ class BetterConsole:
         nstring.replace("\n",' | ')
         self.printc(nstring,0)
 
+    def _log(self,lvl,msg,*args):
+        ins=inspect.stack()
+        i=0
+        funcs=[]
+        for x in ins:
+            if i>1:
+                tA=x.function
+                funcs.append(tA)
+            else:
+                i+=1
+        #pprint.pprint(ins)
+        funcs.pop(-1)
+        func=';'.join(funcs)
+        file=ins[-1].filename
+        lineno=ins[-1].lineno
+        mtColor=''#colorama.Fore.MAGENTA
+        lvls={1:'DEBUG',2:'INFO',3:'WARNING',4:'CRITICAL',5:'ERROR'}
+        nstring=f'{mtColor}["{file:<10}"({str(lineno)+")":<3}] <{func:<10}> # {lvls[lvl]:<9} : {msg} '+' '.join(args)
+        nstring.replace("\n",' | ')
+        self.printc(nstring,lvl)
 
     def debug(self,msg,*args):
-        ins=inspect.stack()
-        func=ins[1].function
-        file=ins[1].filename
-        lineno=ins[1].lineno
-        nstring = f"[file: {file}, line{lineno}] {func} # DEBUG: {msg}" + ' '.join(args)
-        nstring.replace("\n",' | ')
-        self.printc(nstring,1)
+        self._log(1,msg,*args)
+
 
     def info(self,msg,*args):
-        ins=inspect.stack()
-        func=ins[1].function
-        file=ins[1].filename
-        lineno=ins[1].lineno
-        nstring = f"[file: {file}, line{lineno}] {func} # INFO: {msg}" + ' '.join(args)
-        nstring.replace("\n",' | ')
-        self.printc(nstring,2)
+        self._log(2,msg,*args)
 
     def warn(self,msg,*args):
-        ins=inspect.stack()
-        func=ins[1].function
-        file=ins[1].filename
-        lineno=ins[1].lineno
-        nstring = f"[file: {file}, line{lineno}] {func} # WARNING: {msg}" + ' '.join(args)
-        nstring.replace("\n",' | ')
-        self.printc(nstring,3)
+        self._log(3,msg,*args)
 
     def crit(self,msg,*args):
-        ins=inspect.stack()
-        func=ins[1].function
-        file=ins[1].filename
-        lineno=ins[1].lineno
-        nstring = f"[file: {file}, line{lineno}] {func} # CRITICAL: {msg}" + ' '.join(args)
-        nstring.replace("\n",' | ')
-        self.printc(nstring,4)
+        self._log(4,msg,*args)
 
     def error(self,msg,*args):
-        ins=inspect.stack()
-        func=ins[1].function
-        file=ins[1].filename
-        lineno=ins[1].lineno
-        nstring = f"[file: {file}, line{lineno}] {func} # ERROR: {msg}" + ' '.join(args)
-        nstring.replace("\n",' | ')
-        self.printc(nstring,5)
+        self._log(5,msg,*args)
 
     def loop(self):
         '''Include this function in your main loop! Warning: Only recommended to execute once every loop'''
