@@ -1,4 +1,12 @@
 # Better Console
+
+
+## Features:
+Filters for Debug, Info, Warning, Critical , Error and Normal messages
+
+
+Text input bar to execute commands
+
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 [![Python 3.7.5](https://img.shields.io/badge/python-3.7.5-green.svg)](https://www.python.org/downloads/release/python-375/)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
@@ -11,23 +19,13 @@
 Provides a better console for python programs to use
 
 
-# Installation:
-## Prerequisites
+## Installation:
+### Prerequisites
 python 3.7.5 or above (have no idea if the versions below that work)
 PySimpleGuiQt (should install itself when Better Console is installing)
 
-## install
+### install
  pip install Better-Console==0.0.6
-
-
-
-
-# Features:
-Filters for Debug, Info, Warning, Critical , Error and Normal messages
-
-
-Text input bar to execute commands
-
 
 ## Usage:
 ```python
