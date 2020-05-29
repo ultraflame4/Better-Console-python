@@ -28,7 +28,7 @@ import Better_Console
 # Create an instance of better console . Warning: Please only create one instance of the object
 c=betterConsole.BetterConsole()
 
-# I recommend you to execute this once after
+# I recommend you to execute this once after creating an instance of better console
 c.loop()
 
 # Printing to console
