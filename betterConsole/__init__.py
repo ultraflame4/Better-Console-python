@@ -10,7 +10,7 @@ import json
 import pprint
 #import colorama
 
-v = "0.0.5"
+v = "0.0.6"
 github="https://github.com/ultraflame4/Better-Console-python"
 
 psg.LOOK_AND_FEEL_TABLE['BtrConsole'] = {'BACKGROUND': '#fafafa',
