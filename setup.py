@@ -4,7 +4,7 @@ Please go to the github [here](https://github.com/ultraflame4/Better-Console-pyt
 '''
 setuptools.setup(
     name="Better Console",
-    version="0.0.6a",
+    version="0.0.6",
     author="ultraflame4",
     author_email="ultraflame4@gmail.com",
     long_description=long_description,
@@ -14,7 +14,7 @@ setuptools.setup(
     packages=["Better_Console"],
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: GNU License",
+        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.7',

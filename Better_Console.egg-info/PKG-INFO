@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: Better-Console
+Version: 0.0.6
+Summary: A Better Console for python programs
+Home-page: https://github.com/ultraflame4/Better-Console-python
+Author: ultraflame4
+Author-email: ultraflame4@gmail.com
+License: UNKNOWN
+Description: 
+        Please go to the github [here](https://github.com/ultraflame4/Better-Console-python)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown

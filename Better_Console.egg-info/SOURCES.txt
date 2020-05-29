@@ -1,0 +1,8 @@
+README.md
+setup.py
+Better_Console/__init__.py
+Better_Console.egg-info/PKG-INFO
+Better_Console.egg-info/SOURCES.txt
+Better_Console.egg-info/dependency_links.txt
+Better_Console.egg-info/requires.txt
+Better_Console.egg-info/top_level.txt
