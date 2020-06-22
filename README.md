@@ -9,7 +9,7 @@ Text input bar to execute commands
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 [![Python 3.7.5](https://img.shields.io/badge/python-3.7.5-green.svg)](https://www.python.org/downloads/release/python-375/)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-maybe-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-maybe-blue.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-green.svg)](http://perso.crans.org/besson/LICENSE.html)
 
 ![Filters](/imgs/ezgif-3-e5e15d50dcf7.gif)
